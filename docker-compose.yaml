@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    environment:
+      - NODE_ENV=ctf
+      - CTF_KEY=dX45jr9p65rwR6EuI9wD
+    ports:
+      - 8080:3000
