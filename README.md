@@ -1,6 +1,10 @@
-# fagdag-juiceshop-ctf
+# Fagdag: Let's hack the JuiceShop (CTF)
 
-Juice Shop CTF Setup
+Nygjerrig på websikkerhet?
+I dag er du en hacker, enten aleine eller sammen med en kollega, der vi hacker OWASP Juice Shop. 
+Her er det utfordringer for alle, helt fersk eller om du alt henger på the Dark Web. I dag er ikke Juice Shop trygg, når Bouvet hackerteam slår til.
+
+## Juice Shop CTF Setup
 
 JuiceShop: [http://localhost:8080/](http://localhost:8080/)
 CTFd Score Server: [http://fagdag-ctfd.kefo.no/](http://fagdag-ctfd.kefo.no/)
