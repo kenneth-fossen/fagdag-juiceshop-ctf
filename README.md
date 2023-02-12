@@ -2,8 +2,8 @@
 
 Juice Shop CTF Setup
 
-JuiceShop: http://localhost:8080/
-CTFd Score Server: http://fagdag-ctfd.kefo.no/
+JuiceShop: [http://localhost:8080/](http://localhost:8080/)
+CTFd Score Server: [http://fagdag-ctfd.kefo.no/](http://fagdag-ctfd.kefo.no/)
 
 ## Using Docker
 
