@@ -6,8 +6,9 @@ Her er det utfordringer for alle, helt fersk eller om du alt henger på the Dark
 
 ## Juice Shop CTF Setup
 
-JuiceShop: [http://localhost:8080/](http://localhost:8080/)
-CTFd Score Server: [http://fagdag-ctfd.kefo.no/](http://fagdag-ctfd.kefo.no/)
+JuiceShop: [http://localhost:3000/](http://localhost:3000/)
+
+CTFd Score Server: [http://fagdag-ctfd:8000.kefo.no/](http://fagdag-ctfd:8000.kefo.no/)
 
 ## Using Docker
 
