@@ -4,6 +4,9 @@ Nygjerrig på websikkerhet?
 I dag er du en hacker, enten aleine eller sammen med en kollega, der vi hacker OWASP Juice Shop. 
 Her er det utfordringer for alle, helt fersk eller om du alt henger på the Dark Web. I dag er ikke Juice Shop trygg, når Bouvet hackerteam slår til.
 
+## Beskrivelse
+
+
 ## Juice Shop CTF Setup
 
 JuiceShop: [http://localhost:3000/](http://localhost:3000/)
@@ -12,10 +15,28 @@ CTFd Score Server: [http://fagdag-ctfd:8000.kefo.no/](http://fagdag-ctfd:8000.ke
 
 ## Using Docker
 
-### Client Docker compose
+### Install Docker
+
+[Docker Desktop Install (macOS/Windows/Linux)](https://www.docker.com/products/docker-desktop/)
+This has both the `docker` and `docker-compose` command.
+
+#### Homebrew install (macOS)
 
 ```sh
-docker-compose up
+brew install docker
+brew install docker-compose
+mkdir -p ~/.docker/cli-plugins
+ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+```
+
+### Client Docker compose
+
+Navigate to the root of the cloned repo.
+There should be a `docker-compose.yml` file there, and then you can run the following commands.
+
+```sh
+docker-compose up -d 
+docker-compose down
 ```
 
 The challenges are now available at http://localhost:8080/
