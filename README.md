@@ -39,7 +39,7 @@ docker-compose up -d
 docker-compose down
 ```
 
-The challenges are now available at http://localhost:8080/
+The challenges are now available at [http://localhost:3000/](http://localhost:3000/)
 
 ### Client Clean Up
 
