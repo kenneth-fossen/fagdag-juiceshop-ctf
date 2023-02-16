@@ -15,9 +15,11 @@ Vi samler oss og tar en liten gjennomgang felles.
 
 ## Let's get going!
 
-Alle må lage konto på [CTFd](http://fagdag-ctfd.kefo.no/), her kan de som har lyst samle seg i Team og jobbe sammen lage et team og joine det.
+Alle må lage konto på vår private [CTFd](http://fagdag-ctfd.kefo.no/), her kan de som har lyst samle seg i Team og jobbe sammen lage et team og joine det.
 Om du har lyst å jobbe aleine, så er det helt fint, bare lagt et team med bare deg i.
 Challenges og Scoreboard åpner kl 1230 og vi holder på så lenge vi har det gøy.
+
+PS: Du trenger ikke bruke ekte navn eller e-post. Finn ditt hacker nick ;)
 
 ## Planen
 
@@ -36,12 +38,15 @@ CTFd Score Server: [http://fagdag-ctfd.kefo.no/](http://fagdag-ctfd.kefo.no/)
 
 Backup: [http://fagdag-ctfd.kefo.no:3000](http://fagdag-ctfd.kefo.no:3000)
 
+## Getting ready
+
+Du trenger enten Docker eller Podman.
+Podman er gratis, og Docker må du ha lisens om du begynner å bruke det når du utvikler.
+
 ## Using Docker
 
 ### Install Docker
 
-[Docker Desktop Install (macOS/Windows/Linux)](https://www.docker.com/products/docker-desktop/)
-This has both the `docker` and `docker-compose` command.
 
 #### Homebrew install (macOS)
 
@@ -52,7 +57,12 @@ mkdir -p ~/.docker/cli-plugins
 ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
 ```
 
-### Client Docker compose
+### Windows Install
+
+[Docker Desktop Install (macOS/Windows/Linux)](https://www.docker.com/products/docker-desktop/)
+This has both the `docker` and `docker-compose` command.
+
+### Docker Compose (client)
 
 Navigate to the root of the cloned repo.
 There should be a `docker-compose.yml` file there, and then you can run the following commands.
@@ -64,52 +74,46 @@ docker-compose down
 
 The challenges are now available at [http://localhost:3000/](http://localhost:3000/)
 
-### Client Clean Up
+### Docker Compose (client clean-up)
 
+To clean up and remove the docker container, you can from the same root folder, run:
 ```sh
 docker compose rm -v -f
 ```
 
 ## Using Podman
 
+### Install PodMan
+
 For macOS, you will need `podman` and `podman-compose`.
 For Windows, you will need Podman-desktop and `podman-compose`.
 
-### MacOS
+#### MacOS
 
 [Podman-Desktp MacOs-Install](https://podman-desktop.io/docs/Installation/macos-install)
 
 ```sh
 brew install podman
 brew install podman-compose
-#optional
+#optional (but it is very nice)
 brew install podman-desktop
 
 # Init and Start Podman
 podman machine init
 podman machine start
 podman status
-
-# Run the challange
-podman-compose up -d
 ```
 
-Stopping:
-
-```sh
-podman-compose down
-```
-
-### Windows
+#### Windows
 
 You will need the Podman-Desktop and `podman-compose`
 To install, follow the instructions below.
 
-#### Podman Desktop
+##### Podman Desktop
 
 [Podman-Desktop](https://podman-desktop.io/docs/Installation/windows-install)
 
-### Podman-compose
+#### Podman-compose
 
 [Podman-compose](https://github.com/containers/podman-compose#installation)
 
@@ -121,3 +125,37 @@ pip3 install podman-compose
 ```
 
 pass `--user` to install inside regular user home without being root.
+
+### Podman-Compose (client)
+
+Starting and stopping:
+
+```sh
+
+podman-compose up -d
+# Stopping
+podman-compose down
+```
+
+
+
+
+### Podman-Compose (client)
+
+Navigate to the root of the cloned repo.
+There should be a `docker-compose.yml` file there, and then you can run the following commands.
+
+```sh
+# Start the challange
+podman-compose up -d 
+# Stopping
+podman-compose down
+```
+
+The challenges are now available at [http://localhost:3000/](http://localhost:3000/)
+
+### Podman-Compose (client clean-up)
+
+```sh
+podman-compose rm -v -f
+```
